@@ -15,6 +15,9 @@ informFromLocalStorage();
 
 function onSubmitFeedBackForm(event) {
   event.preventDefault();
+  const email = event.currentTarget.email.value;
+  const message = event.currentTarget.message.value;
+  console.log({ email, message });
   event.currentTarget.reset();
   localStorage.removeItem(FORM_KEY);
 }
